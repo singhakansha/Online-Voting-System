@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="candidate_reg.master.cs" Inherits="candidate_reg" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            border: 2px solid #000066;
+            height: 741px;
+            margin-right: 0px;
+        }
+        .auto-style5 {
+            width: 75%;
+        }
+        #Reset1 {
+            width: 57px;
+        }
+        .auto-style6 {
+            width: 462px;
+            }
+        .auto-style7 {
+            width: 462px;
+            height: 29px;
+        }
+        .auto-style9 {
+            width: 462px;
+            height: 32px;
+        }
+        .auto-style10 {
+            height: 35px;
+        }
+        .auto-style11 {
+            height: 66px;
+        }
+        .auto-style12 {
+            width: 462px;
+            height: 12px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table cellpadding="2" class="auto-style1">
+            <tr>
+                <td colspan="3" style="font-family: 'Courier New'; font-size: 35px; font-weight: bolder; font-style: normal; font-variant: normal; color: #000080; background-image: url('/WebSite3/WebSite3/image/imagesCARZA2NF.jpg');" class="auto-style11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ONLINE NATIONAL POLLING SYSTEM</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="auto-style10" style="color: #660066; background-color: #66FF99; font-family: 'French Script MT';">
+                    <label style="font-family:Georgia; color:#660066; background-color: #66FF99; font-size: 22px; font-weight: bold; font-style: italic;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *******WELCOME CANDIDATE&#39;S!!!********</label></td>
+            </tr>
+            <tr>
+                <td class="auto-style7" style="color: #FFFFFF; font-family: 'Comic Sans MS'; font-size: 15px; font-weight: bold; font-style: normal; font-variant: normal; background-color: #0033CC">REGISTRATION</td>
+                <td class="auto-style5" rowspan="8" style="border-style: groove; border-color: #0000FF">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+            </tr>
+                <td class="auto-style5" rowspan="8" style="border-style: groove; border-color: #0000FF">
+                    <asp:Button ID="Button1" runat="server" Height="43px" OnClick="Button1_Click" Text="POLLS" Width="87px" BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <asp:Button ID="Button2" runat="server" Height="36px" Text="ANSWER" Width="88px" BackColor="#000099" Font-Bold="True" ForeColor="White" OnClick="Button2_Click" />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <asp:Button ID="Button3" runat="server" BackColor="#000099" Font-Bold="True" ForeColor="White" Text="Veiw Profile" Width="128px" OnClick="Button3_Click" />
+            </tr>
+            <tr>
+                <td class="auto-style7" style="font-family: 'Comic Sans MS'; font-size: 13px; font-weight: bold; font-style: normal; font-variant: normal; color: #0033CC; background-color: #FFFFFF">USERNAME</td>
+            </tr>
+            <tr>
+                <td class="auto-style7" style="font-family: 'Comic Sans MS'; font-size: 13px; font-weight: bold; font-style: normal; font-variant: normal; color: #0033CC; background-color: #FFFFFF">
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style7" style="font-family: 'Comic Sans MS'; font-size: 13px; font-weight: bold; font-style: normal; font-variant: normal; color: #0033CC; background-color: #FFFFFF">PASSWORD</td>
+            </tr>
+            <tr>
+                <td class="auto-style9" style="font-family: 'Comic Sans MS'; font-size: 13px; font-weight: bold; font-style: normal; font-variant: normal; color: #0033CC; background-color: #FFFFFF">
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style7" style="font-family: 'Comic Sans MS'; font-size: 11px; font-weight: bold; font-style: normal; font-variant: normal; color: #0033CC; background-color: #FFFFFF">
+                    TO FILL THE FORM </td>
+            </tr>
+            <tr>
+                <td class="auto-style12" style="font-family: 'Comic Sans MS'; font-size: 13px; font-weight: bold; font-style: normal; font-variant: normal; color: #0033CC; background-color: #FFFFFF">
+                    <a href="Candidate_registration.aspx">CLICK HERE</a></td>
+            </tr>
+            <tr>
+                <td class="auto-style6" style="font-family: 'Comic Sans MS'; font-size: 10px; font-weight: bold; font-style: normal; font-variant: normal; color: #0033CC; background-color: #FFFFFF"> 
+                    <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="XmlDataSource1" />
+                    <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/XMLFile.xml"></asp:XmlDataSource>
+                </td>
+            </tr>
+            </table>
+        
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Voter_pro.master.cs" Inherits="Voter_pro" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 107%;
+            height: 272px;
+        }
+        .auto-style4 {
+            height: 102px;
+        }
+        .auto-style9 {
+            height: 102px;
+            width: 11px;
+        }
+        .auto-style12 {
+            height: 15px;
+        }
+        .auto-style13 {
+            height: 9px;
+        }
+        .auto-style14 {
+            width: 2018%;
+        }
+        .auto-style15 {
+            height: 26px;
+        }
+        .auto-style16 {
+            width: 100%;
+            height: 183px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+                <table class="auto-style1">
+            <tr>
+                <td colspan="3" style="font-family: 'Comic Sans MS'; font-size: x-large; font-weight: bold; text-transform: uppercase; color: #000080; background-image: url('/WebSite3/WebSite3/image/imagesCARZA2NF.jpg');" class="auto-style12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ONLINE NATIONAL&nbsp;POLLING SYSTEM</td>
+            </tr>
+            <tr>
+               <td colspan="3" style="font-family: 'Comic Sans MS'; font-size: x-large; font-weight: lighter; color: #FF0000" class="auto-style13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WELOME TO VOTER PROFILE!!!!!!</td>
+            </tr>
+            <tr>
+                <td class="auto-style9" style="border: thin solid #000080">
+                    <table class="auto-style14">
+                        <tr>
+                            <td style="background-color: #FFFFFF; font-family: 'Comic Sans MS'; color: #000000; text-transform: uppercase">
+                                <asp:Label ID="Label4" runat="server" BackColor="Blue" ForeColor="White" Text="REGISTRATION"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label2" runat="server" Text="Username"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="Label3" runat="server" Text="Password"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style15">
+                                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #0000FF; font-size: small; font-family: 'Comic Sans MS'; font-style: normal; text-transform: uppercase">TO FILL TH FORM</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="True" ForeColor="Blue" NavigateUrl="~/Default3.aspx">CLICK HERE</asp:HyperLink>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="XmlDataSource1" />
+                                <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/XMLFile.xml"></asp:XmlDataSource>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="auto-style4" style="border: thin solid #000080">
+                    
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    
+                </td>
+                <td class="auto-style4" style="border: thin solid #000080">
+                    <table cellpadding="2" class="auto-style16">
+                        <tr>
+                            <td>
+                                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Ask questions and Veiw Answers" BackColor="#3366FF" Font-Bold="True" ForeColor="#FFCCCC" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Vote" BackColor="#3366FF" Font-Bold="True" ForeColor="#FFCCFF" Width="131px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Button ID="Button3" runat="server" Text="Veiw Previous Year Results" BackColor="#3366FF" Font-Bold="True" ForeColor="#FFCCFF" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Button ID="Button4" runat="server" Text="Veiw Election Results" BackColor="#3366FF" Font-Bold="True" ForeColor="#FFCCFF" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>To veiw Profile choose options below:<br />
+                                <asp:TreeView ID="TreeView1" runat="server" ImageSet="Contacts" NodeIndent="10">
+                                    <HoverNodeStyle Font-Underline="False" />
+                                    <Nodes>
+                                        <asp:TreeNode Text="Narendra Modi" Value="Narendra Modi" NavigateUrl="~/modi.aspx"></asp:TreeNode>
+                                        <asp:TreeNode Text="Rahul Gandhi" Value="Rahul Gandhi" NavigateUrl="~/rahul.aspx"></asp:TreeNode>
+                                        <asp:TreeNode Text="Arvind Kejriwal" Value="Arvind Kejriwal" NavigateUrl="~/kejriwal.aspx"></asp:TreeNode>
+                                    </Nodes>
+                                    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                                    <ParentNodeStyle Font-Bold="True" ForeColor="#5555DD" />
+                                    <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" VerticalPadding="0px" />
+                                </asp:TreeView>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    </form>
+</body>
+</html>
